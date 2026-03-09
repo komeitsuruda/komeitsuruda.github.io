@@ -8,45 +8,42 @@
 
 <body>
 
-<nav>
-<a href="index.html">ホーム</a> |
-<a href="essays.html">エッセイ</a> |
-<a href="journal.html">日記</a> |
-<a href="photos.html">写真</a> |
-<a href="about.html">プロフィール</a> |
-<a href="contact.html">お問い合わせ</a>
-</nav>
+<!-- 共通ヘッダー -->
+<header>
+  <h1>Komei Tsuruda</h1>
+  <p>日常を言葉と写真で記録しています。</p>
+</header>
 
+<nav>
+  <a href="index.html">ホーム</a> |
+  <a href="essays.html">エッセイ</a> |
+  <a href="journal.html">日記</a> |
+  <a href="photos.html">写真</a> |
+  <a href="about.html">プロフィール</a> |
+  <a href="contact.html">お問い合わせ</a>
+</nav>
 <hr>
+<!-- 共通ヘッダーここまで -->
 
 <h1>日記</h1>
 
-<!-- 今日の日記 -->
 <div id="today-entry" style="white-space: pre-wrap;">
-内見を3件した。いい家を見つけるって難しいよな。
-  
-いい部屋が見つかりますように。
-  おおお
+ここに今日の日記を貼り付けます。
+
+空行で段落、改行もそのまま反映。
+
+写真を入れたい場合は下に<img>を追加
+例：
 <img src="photo1.jpg" alt="今日の写真" width="300">
 </div>
 
-<!-- 過去の日記はここに追記 -->
-<div id="past-entries">
-<!--
-<h2>2026年03月08日</h2>
-<p>昨日の日記内容</p>
--->
-</div>
-
 <script>
-  // 今日の日付を自動表示
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2, '0');
-  const dd = String(today.getDate()).padStart(2, '0');
-
-  const todayEntryDiv = document.getElementById('today-entry');
-  todayEntryDiv.innerHTML = `【${yyyy}年${mm}月${dd}日】\n` + todayEntryDiv.innerHTML;
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, '0');
+const dd = String(today.getDate()).padStart(2, '0');
+document.getElementById('today-entry').innerHTML =
+  `【${yyyy}年${mm}月${dd}日】\n` + document.getElementById('today-entry').innerHTML;
 </script>
 
 </body>

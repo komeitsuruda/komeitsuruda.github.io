@@ -1,20 +1,14 @@
 /* ===========================
-   基本リセット・全体
+   全体
 =========================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Yu Gothic UI", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
   line-height: 1.8;
-  background: #ffffff;
-  color: #222222;
+  background: #fafafa; /* オフホワイト */
+  color: #333333;      /* 柔らかい黒 */
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* ===========================
@@ -22,18 +16,19 @@ body {
 =========================== */
 header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 2.2em;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
 header p {
-  font-size: 1em;
-  color: #555555;
+  font-size: 1.1em;
+  color: #666666;
 }
 
 /* ===========================
@@ -41,44 +36,45 @@ header p {
 =========================== */
 nav {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 nav a {
   text-decoration: none;
-  color: #222222;
-  margin: 0 10px;
+  color: #444444;
+  margin: 0 15px;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #007acc;
+  color: #007acc; /* 洗練カラーアクセント */
 }
 
 /* ===========================
    見出し
 =========================== */
 h1, h2 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 h2 {
-  font-size: 1.4em;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  font-size: 1.6em;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
   padding-bottom: 5px;
 }
 
 /* ===========================
-   日記・エッセイ本文
+   本文
 =========================== */
 #today-entry,
 .essay-entry {
-  white-space: pre-wrap; /* 改行・段落をそのまま反映 */
-  margin-bottom: 30px;
-  font-size: 1em;
-  color: #333333;
+  white-space: pre-wrap;
+  margin-bottom: 40px;
+  font-size: 1.05em;
+  color: #444444;
 }
 
 /* ===========================
@@ -87,21 +83,22 @@ h2 {
 .photos-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .photos-grid img {
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   max-width: 100%;
   height: auto;
-  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .photos-grid img:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* ===========================
@@ -109,29 +106,30 @@ h2 {
 =========================== */
 form {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 input, textarea, button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1em;
   font-family: inherit;
 }
 
 button {
-  background-color: #222222;
-  color: #ffffff;
+  background-color: #007acc;
+  color: #fff;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #007acc;
+  background-color: #005fa3;
 }
 
 /* ===========================
@@ -139,20 +137,8 @@ button:hover {
 =========================== */
 hr {
   border: none;
-  border-top: 1px solid #ddd;
-  margin: 20px 0;
-}
-
-/* ===========================
-   リンク・テキスト装飾
-=========================== */
-a {
-  text-decoration: none;
-}
-
-p img {
-  display: block;
-  margin: 15px auto;
+  border-top: 1px solid #e0e0e0;
+  margin: 30px 0;
 }
 
 /* ===========================
@@ -160,16 +146,16 @@ p img {
 =========================== */
 @media screen and (max-width: 600px) {
   body {
-    padding: 10px;
+    padding: 15px;
   }
 
   nav a {
     display: block;
-    margin: 5px 0;
+    margin: 10px 0;
   }
 
   .photos-grid {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 }

@@ -21,12 +21,20 @@
 
 <h1>日記</h1>
 
-<h2>2026年3月9日</h2>
+<div id="today-entry">
+  <h2 id="entry-title">タイトルをここに</h2>
+  <p id="entry-date"></p>
+  <p id="entry-content">ここに文章を書きます。</p>
+</div>
 
-<p>
-今日は自分のホームページを作り始めた。
-少しずつだけど、自分の場所ができていく感じがして嬉しい。
-</p>
+<script>
+  // 今日の日付を表示
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  document.getElementById('entry-date').textContent = `${yyyy}年${mm}月${dd}日`;
+</script>
 
 </body>
 </html>

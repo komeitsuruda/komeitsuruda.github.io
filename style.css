@@ -1,61 +1,175 @@
-/* 全体設定 */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.8;
-    background-color: #fff;
-    color: #111;
+/* ===========================
+   基本リセット・全体
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ナビゲーション */
+body {
+  font-family: "Yu Gothic UI", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  line-height: 1.8;
+  background: #ffffff;
+  color: #222222;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===========================
+   ヘッダー
+=========================== */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1em;
+  color: #555555;
+}
+
+/* ===========================
+   ナビゲーション
+=========================== */
 nav {
-    margin-bottom: 30px;
-    font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #111;
-    margin-right: 15px;
+  text-decoration: none;
+  color: #222222;
+  margin: 0 10px;
+  font-weight: 500;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  color: #007acc;
 }
 
-/* 見出し */
-h1 {
-    font-size: 32px;
-    margin-top: 40px;
+/* ===========================
+   見出し
+=========================== */
+h1, h2 {
+  margin-bottom: 10px;
 }
 
 h2 {
-    margin-top: 30px;
-    font-size: 24px;
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
 }
 
-h3 {
-    margin-top: 20px;
-    font-size: 20px;
+/* ===========================
+   日記・エッセイ本文
+=========================== */
+#today-entry,
+.essay-entry {
+  white-space: pre-wrap; /* 改行・段落をそのまま反映 */
+  margin-bottom: 30px;
+  font-size: 1em;
+  color: #333333;
 }
 
-/* 区切り線 */
-hr {
-    margin: 30px 0;
-    border: none;
-    border-top: 1px solid #ccc;
-}
-
-/* 段落 */
-p {
-    margin-bottom: 20px;
-}
-
-/* 写真ページ用のグリッド（後で写真を並べるとき便利） */
+/* ===========================
+   写真
+=========================== */
 .photos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.photos-grid img {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.photos-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   フォーム
+=========================== */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+button {
+  background-color: #222222;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #007acc;
+}
+
+/* ===========================
+   水平線
+=========================== */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* ===========================
+   リンク・テキスト装飾
+=========================== */
+a {
+  text-decoration: none;
+}
+
+p img {
+  display: block;
+  margin: 15px auto;
+}
+
+/* ===========================
+   モバイル対応
+=========================== */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .photos-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

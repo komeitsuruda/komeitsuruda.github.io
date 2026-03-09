@@ -3,31 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <title>お問い合わせ | Komei Tsuruda</title>
-<link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-<a href="index.html">ホーム</a> |
-<a href="essays.html">エッセイ</a> |
-<a href="journal.html">日記</a> |
-<a href="photos.html">写真</a> |
-<a href="about.html">プロフィール</a> |
-<a href="contact.html">お問い合わせ</a>
-</nav>
+<!-- 共通ヘッダー -->
+<header>
+  <h1>Komei Tsuruda</h1>
+  <p>日常を言葉と写真で記録しています。</p>
+</header>
 
+<nav>
+  <a href="index.html">ホーム</a> |
+  <a href="essays.html">エッセイ</a> |
+  <a href="journal.html">日記</a> |
+  <a href="photos.html">写真</a> |
+  <a href="about.html">プロフィール</a> |
+  <a href="contact.html">お問い合わせ</a>
+</nav>
 <hr>
+<!-- 共通ヘッダーここまで -->
 
 <h1>お問い合わせ</h1>
 
-<p>
-ご連絡は以下のメールアドレスまでお願いします。
-</p>
-
-<p>
-komei.tsuruda@gmail.com
-</p>
+<p>お問い合わせはこちらのメールフォームまたはメールアドレスでどうぞ。</p>
+<form>
+  <label>お名前<br><input type="text" name="name"></label><br><br>
+  <label>メールアドレス<br><input type="email" name="email"></label><br><br>
+  <label>メッセージ<br><textarea name="message" rows="5"></textarea></label><br><br>
+  <button type="submit">送信</button>
+</form>
 
 </body>
 </html>

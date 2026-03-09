@@ -21,19 +21,32 @@
 
 <h1>日記</h1>
 
-<div id="today-entry">
-  <h2 id="entry-title">内見たくさん</h2>
-  <p id="entry-date"></p>
-  <p id="entry-content">3件、内見をした。いい部屋が見つかるといいな。</p>
+<!-- 今日の日記 -->
+<div id="today-entry" style="white-space: pre-wrap;">
+内見を3件した。いい家を見つけるって難しいよな。
+  
+いい部屋が見つかりますように。
+  おおお
+<img src="photo1.jpg" alt="今日の写真" width="300">
+</div>
+
+<!-- 過去の日記はここに追記 -->
+<div id="past-entries">
+<!--
+<h2>2026年03月08日</h2>
+<p>昨日の日記内容</p>
+-->
 </div>
 
 <script>
-  // 今日の日付を表示
+  // 今日の日付を自動表示
   const today = new Date();
   const yyyy = today.getFullYear();
   const mm = String(today.getMonth() + 1).padStart(2, '0');
   const dd = String(today.getDate()).padStart(2, '0');
-  document.getElementById('entry-date').textContent = `${yyyy}年${mm}月${dd}日`;
+
+  const todayEntryDiv = document.getElementById('today-entry');
+  todayEntryDiv.innerHTML = `【${yyyy}年${mm}月${dd}日】\n` + todayEntryDiv.innerHTML;
 </script>
 
 </body>

@@ -1,46 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Komei Tsuruda</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komei Tsuruda</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #111;
+    }
 
+    header {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .date {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
 <body>
 
-<!-- 共通ヘッダー -->
 <header>
-
-<h1>Komei Tsuruda</h1>
-
-<p>日常を言葉と写真で記録しています。</p>
-
+  <h1>Komei Tsuruda</h1>
+  <nav>
+    <a href="#">Essay</a>
+    <a href="#">Diary</a>
+    <a href="#">Profile</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-<nav>
+<div class="container">
 
-<a href="index.html">ホーム</a>
-<a href="essay.html">エッセイ</a>
-<a href="diary.html">日記</a>
-<a href="photo.html">写真</a>
-<a href="about.html">プロフィール</a>
-<a href="contact.html">お問い合わせ</a>
+  <div class="section-title">PICK UP</div>
 
-</nav>
-<hr>
-<!-- 共通ヘッダーここまで -->
+  <div class="card">
+    <div class="date">2026.03.01</div>
+    <h2>今日撮った1枚が、15年後に宝物になる。</h2>
+    <p>日常を撮り続けて気づいたことについて書きました。</p>
+  </div>
 
-<h2>最新のエッセイ</h2>
-<p>ここに最新のエッセイタイトルと概要を入力</p>
+  <div class="card">
+    <div class="date">2026.02.20</div>
+    <h2>“ただの写真”が、あとから宝物になる理由</h2>
+    <p>写真に意味を持たせる視点について。</p>
+  </div>
 
-<h2>最新の日記</h2>
-<p>ここに今日の日記冒頭を入力</p>
+  <div class="section-title">LATEST ESSAYS</div>
 
-<h2>最近の写真</h2>
-<div class="photos-grid">
-  <img src="photo1.jpg" alt="説明1" width="150">
-  <img src="photo2.jpg" alt="説明2" width="150">
+  <div class="card">
+    <div class="date">2026.03.18</div>
+    <h2>日常を残すということ</h2>
+    <p>なぜ日常を撮り続けるのか。</p>
+  </div>
+
+  <div class="card">
+    <div class="date">2026.03.10</div>
+    <h2>バンクーバーでの暮らし</h2>
+    <p>最近の生活についての記録。</p>
+  </div>
+
+  <div class="card">
+    <div class="date">2026.03.05</div>
+    <h2>コーヒーと静かな時間</h2>
+    <p>朝の習慣について。</p>
+  </div>
+
 </div>
+
+<footer>
+  © 2026 Komei Tsuruda
+</footer>
 
 </body>
 </html>
+
